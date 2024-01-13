@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#inner {
+    background-color: #800080;
+    height: 100px;
+    width: 100px;
+    border: #0000ff 25px solid;
+}
+
+#middle {
+    background-color: #008000;
+    height: 150px;
+    width: 150px;
+    border: #ffff00 25px solid;
+}
+#outer {
+    background-color: #ffa500;
+    height: 200px;
+    width: 200px;
+    border: #ff0000 25px solid;
+}

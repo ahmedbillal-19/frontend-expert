@@ -1,0 +1,33 @@
+:root {
+    --font-size: 18px;
+    --navbar-bg-color: #6e072d;
+    --navbar-bg-hover-color: #b90e4d;
+    --text-color: #ffff;
+}
+
+nav {
+    background-color: var(--navbar-bg-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+nav > ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    color: var(--text-color);
+    list-style: none;
+}
+
+nav > ul > li {
+    padding: var(--font-size) calc(var(--font-size)*1.5);
+    font-size: var(--font-size);
+}
+
+nav > ul > li:hover {
+    background-color: var(--navbar-bg-hover-color);
+}
+
+li:not(:last-of-type) {
+    border-right: 2px solid var(--text-color);
+}
