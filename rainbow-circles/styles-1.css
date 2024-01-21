@@ -1,0 +1,25 @@
+div {
+    border-radius: 50%;
+}
+#inner {
+    background-color: #800080;
+    height: 50px;
+    width: 50px;
+    border: #0000ff 25px solid;
+}
+
+#middle {
+    background-color: #008000;
+    width: 100px;
+    height: 100px;
+    padding: 25px;
+    border: 25px solid #ffff00;
+}
+
+#outer {
+    background-color: #ffa500;
+    width: 200px;
+    height: 200px;
+    padding: 25px;
+    border: 25px solid #ff0000;
+}

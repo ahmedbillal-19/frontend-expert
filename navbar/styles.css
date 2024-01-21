@@ -6,28 +6,29 @@
 }
 
 nav {
-    background-color: var(--navbar-bg-color);
     display: flex;
     justify-content: space-between;
+    color: var(--text-color);
+    background: var(--navbar-bg-color);
 }
 
-nav > ul {
+ul {
     margin: 0;
     padding: 0;
     display: flex;
-    color: var(--text-color);
     list-style: none;
 }
 
-nav > ul > li {
-    padding: var(--font-size) calc(var(--font-size)*1.5);
+ul>li {
     font-size: var(--font-size);
+    padding: var(--font-size) calc(var(--font-size) * 1.5);
 }
 
-nav > ul > li:hover {
-    background-color: var(--navbar-bg-hover-color);
+li:hover {
+    cursor: pointer;
+    background: var(--navbar-bg-hover-color);
 }
 
-li:not(:last-of-type) {
+li:not(:last-child) {
     border-right: 2px solid var(--text-color);
 }

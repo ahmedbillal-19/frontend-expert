@@ -1,29 +1,20 @@
-* {
-    box-sizing: border-box;
-}
-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-}
 
 #inner {
-    background-color: #800080;
-    height: 100px;
-    width: 100px;
-    border: #0000ff 25px solid;
-}
+    --circle-thickness: 25px;
+    --inner-circle-thickness: calc(var(--circle-thickness) * 2);
+    --offset: calc(var(--circle-thickness) * 5);
 
-#middle {
-    background-color: #008000;
-    height: 150px;
-    width: 150px;
-    border: #ffff00 25px solid;
-}
-#outer {
-    background-color: #ffa500;
-    height: 200px;
-    width: 200px;
-    border: #ff0000 25px solid;
+
+    position: relative;
+    top: var(--offset);
+    left: var(--offset);
+    border-radius: 50%;
+    background-color: #800080;
+    height: var(--inner-circle-thickness);
+    width: var(--inner-circle-thickness);
+    box-shadow: 0 0 0 var(--circle-thickness) #0000ff,
+        0 0 0 calc(var(--circle-thickness) * 2) #008000,
+        0 0 0 calc(var(--circle-thickness) * 3) #ffff00,
+        0 0 0 calc(var(--circle-thickness) * 4) #ffa500,
+        0 0 0 calc(var(--circle-thickness) * 5) #ff0000;
 }

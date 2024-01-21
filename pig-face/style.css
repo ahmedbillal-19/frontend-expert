@@ -1,82 +1,97 @@
-body {
-    background-color: #000000;
+:root {
+    --face-color: #ffc0cb;
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --nose-color: #f57187;
+    --perfect-circle: 50%;
+  }
+  
+  body {
+    background-color: var(--black-color);
   }
   
   .head {
     position: relative;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 5px solid black;
     margin-top: 20px;
-    background-color: #ffc0cb;
+    background-color: var(--face-color);
+    height: 200px;
+    width: 200px;
+    border-radius: var(--perfect-circle);
+    border: var(--black-color) 5px solid;
   }
   
-  .ear {
+  .head .ear {
+    background-color: var(--face-color);
+    height: 50px;
+    width: 50px;
+    border-radius: var(--perfect-circle);
+    border: var(--black-color) 5px solid;
     position: absolute;
     z-index: -1;
-    width: 50px;
-    height: 50px;
     top: -10px;
-    border-radius: 50%;
-    border: 5px solid black;
-    background-color: #ffc0cb;
   }
   
-  .ear:nth-child(1) {
+  .head .ear:first-child {
     left: 10px;
   }
   
-  .ear:nth-child(2) {
+  .head .ear:last-child {
     right: 10px;
   }
   
   .eye {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 40px;
-    width: 50px;
+    background-color: var(--white-color);
     height: 50px;
-    border: 2px solid black;
+    width: 50px;
+    position: absolute;
+    border: 2px solid var(--black-color);
     border-radius: 50%;
-    background-color: white;
+    top: 40px;
   }
   
   .eye:first-child {
     left: 30px;
   }
-  .eye:nth-child(2) {
+  
+  .eye:last-child {
     right: 30px;
   }
   
-  .pupil {
-    width: 50%;
-    height: 50%;
+  .eye .pupil {
+    position: absolute;
+    background-color: var(--black-color);
+    height: 25px;
+    width: 25px;
     border-radius: 50%;
-    background-color: black;
+    top: 25%;
+    left: 25%;
   }
   
   .nose {
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100px;
+    background-color: var(--nose-color);
     height: 60px;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 2px solid black;
+    width: 100px;
     border-radius: 35%;
-    background-color: #f57187;
+    position: absolute;
+    bottom: 30px;
+    left: 25%;
+    border: 2px solid var(--black-color);
   }
   
-  .nostril {
-    width: 25%;
-    height: 50%;
+  .nose .nostril {
+    background-color: var(--black-color);
+    height: 30px;
+    width: 25px;
     border-radius: 50%;
-    background-color: black;
+    position: absolute;
+    top: 25%;
+  }
+  
+  .nostril:first-child {
+    left: 10%;
+  }
+  
+  .nostril:last-child {
+    right: 10%;
   }
   

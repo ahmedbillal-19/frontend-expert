@@ -1,0 +1,57 @@
+/*  Write your code here. */
+
+#algo-expert {
+  /*  Write your code here. */
+  grid-area: algo;
+  background-color: #626ee3;
+  width: 75%;
+  margin: auto;
+}
+
+#systems-expert {
+  /*  Write your code here. */
+  grid-area: systems;
+  background-color: #890023;
+  align-self: center;
+}
+
+#ml-expert {
+  /*  Write your code here. */
+  grid-area: ml;
+  background-color: #f37f1b;
+  height: 75px;
+}
+
+#frontend-expert {
+  /*  Write your code here. */
+  background-color: #11967e;
+  grid-area: frontend;
+  align-self: end;
+}
+
+#programming-expert {
+  /*  Write your code here. */
+  background-color: #f21b3f;
+  grid-area: programming;
+  height: 75px;
+  margin-left: 10px;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  color: white;
+  font-weight: bold;
+}
+
+#wrapper {
+  display: grid;
+  grid-template-areas:
+    "systems systems . ml"
+    "algo algo algo algo"
+    "frontend programming programming programming";
+  grid-template-columns: 40fr 10fr 20fr 30fr;
+  row-gap: 24px;
+}
