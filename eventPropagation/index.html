@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Capture Example</title>
+</head>
+<body>
+
+  <div id="outer">
+    Outer
+    <div id="middle">
+      Middle
+      <div id="inner">
+        Inner
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function handleEvent(phase) {
+      console.log(`Event captured in ${phase} phase`);
+    }
+
+    const outerElement = document.getElementById('outer');
+    outerElement.addEventListener('click', () => handleEvent('outer'), false); // true for the capture phase
+    const middleElement = document.getElementById('middle');
+    middleElement.addEventListener('click', () => handleEvent('middle'), false);
+    const innerElement = document.getElementById('inner');
+    innerElement.addEventListener('click', () => handleEvent('inner'), false);
+  </script>
+
+</body>
+</html>
